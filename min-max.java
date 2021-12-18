@@ -16,44 +16,35 @@ class Result {
      * The function accepts INTEGER_ARRAY arr as parameter.
      */
 
-    public static void miniMaxSum(List<Integer> arr) {
-    // Write your code here
-    
-    
-            // Sort cars 
-            Collections.sort(arr);             
-            
-            //vars 
-            int size = arr.size()-1;//4
-            int window = size-1;
-            long min = 0;
-            long max  = 0;
-           
-            //loop through collection 
-            
-            
-            int j = size;
-            
-            for (int i =0; i<size;i++){
-             
-             
-             min+= arr.get(i); 
-             max+= arr.get(j);  
-            
+    public static void miniMaxSum(List < Integer > arr) {
+        // Write your code here
+
+
+        // Sort cars 
+        Collections.sort(arr);
+
+        //vars 
+        int size = arr.size() - 1; //4
+        int window = size - 1;
+        long min = 0;
+        long max = 0;
+
+        //loop through collection 
+
+
+        int j = size;
+
+        for (int i = 0; i < size; i++) {
+
+            min += arr.get(i);
+            max += arr.get(j);
+
             j--;
-            
-                
-            }
-                       
-            System.out.println(min + " " + max);
-          
-          
-          
-          
-           
-           
-            
-            
+
+        }
+
+        System.out.println(min + " " + max);
+
     }
 
 }
@@ -64,7 +55,7 @@ public class Solution {
 
         String[] arrTemp = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
 
-        List<Integer> arr = new ArrayList<>();
+        List < Integer > arr = new ArrayList < > ();
 
         for (int i = 0; i < 5; i++) {
             int arrItem = Integer.parseInt(arrTemp[i]);
