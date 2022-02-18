@@ -8,11 +8,11 @@ import java.util.regex.*;
 
 class Result {
   /*
-   checks permutation given string 
-   returns boolean
+   checks median given arr 
+   returns dbl
    */
 
-  public static int medianNumber(int[] arr) {
+  public static double medianNumber(double[] arr) {
 
     //sort array 
     int length = arr.length;
@@ -24,7 +24,7 @@ class Result {
     }
 
     int middle = 0;
-    int median = 0;
+    double median = 0;
 
     // if arr.length odd divide array /2
     if (length % 2 == 0) {
@@ -41,14 +41,14 @@ class Result {
     return median;
     //return arr[middle];
 
-  } //end isPermutation
+  } //end medianNum
 
 } // end result 
 
 public class Solution {
   public static void main(String[] args) throws IOException {
 
-    int[] arr = new int[4];
+    double[] arr = new double[4];
     for (int i = 0; i < arr.length; i++) {
       int rand = (int)(Math.random() * 100) + 1;
       arr[i] = rand;
