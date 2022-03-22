@@ -17,15 +17,19 @@ class Solution {
     //[e,w] 
     //[w] - omit
 
+    //store chars that have been seen already 
     ArrayList < Character > substring = new ArrayList < > ();
 
+    //init length
     int max = 0;
 
     for (int i = 0; i < s.length(); i++) {
 
+      //clear out array list when duplicate char is found 
       substring.clear();
+      
+      //start new array list with the duplicate char 
       substring.add(s.charAt(i)); //[d]
-      //System.out.print(s.charAt(i) + " : ");
 
       for (int j = i + 1; j < s.length(); j++) {
 
@@ -33,21 +37,14 @@ class Solution {
           substring.add(s.charAt(j));
 
         } else {
-          // System.out.println(substring.length());
           break;
         }
 
       }
-
-      //    System.out.println(substring.size());
-
       if ((substring.size()) > max) {
         max = substring.size();
       }
-
-      //     System.out.println();
-
-    } //emd fpr 
+    } //end for 
 
     return max;
 
